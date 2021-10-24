@@ -1,0 +1,19 @@
+.result {
+  text-align: center;
+  font-size: 28px;
+  font-family: Merienda;
+  color: rgb(24, 23, 23);
+  position: relative;
+  bottom: -50px;
+  line-height: 2;
+}
+
+.current-temperature {
+  font-size: 32px;
+}
+
+.temp-celsius {
+  font-size: 14px;
+  position: relative;
+  top: -12px;
+}

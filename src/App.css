@@ -1,38 +1,50 @@
-.App {
+.App .card {
+  border: 2px solid rgb(117, 80, 80);
+  background-color: rgb(238, 232, 217);
+  border-radius: 12px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App.card-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.App.nextDays {
+  position: relative;
+  left: 630px;
+  bottom: 390px;
+  color: rgb(49, 48, 48);
+  line-height: 0.4;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App.first-day {
+  background-color: rgb(238, 232, 217);
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App.second-day {
+  background-color: rgb(238, 232, 217);
+  margin-bottom: 20px;
+}
+.App.third-day {
+  background-color: rgb(238, 232, 217);
+  margin-bottom: 20px;
+}
+.App.fourth-day {
+  background-color: rgb(238, 232, 217);
+  margin-bottom: 20px;
+}
+.App.fifth-day {
+  background-color: rgb(238, 232, 217);
+  margin-bottom: 20px;
+}
+.App.card-text {
+  font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App #icon2,
+#icon3,
+#icon4,
+#icon5,
+#icon6 {
+  padding: 0px;
 }
