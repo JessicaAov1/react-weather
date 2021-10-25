@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Form.css";
 
 export default function Form() {
+  let [city, setCity] = useState("");
+
+  function updateCity(event) {
+    setCity(event.target.value);
+    console.log(city);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
   return (
     <div className="col-12">
       <div className="welcome">
@@ -9,10 +19,11 @@ export default function Form() {
 
         <div className="row">
           <div className="col-10">
-            <form className="city-form">
+            <form className="city-form" onSubmit={handleSubmit}>
               <input
                 type="text"
                 placeholder="Enter your city :"
+                onChange={updateCity}
                 autoFocus="on"
                 autoComplete="off"
                 className="search-city-input"
