@@ -1,8 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 import Form from "./Form";
-import Weather from "./Weather";
-import Details from "./Details";
+
 import "./Body.css";
 
 export default function Body() {
@@ -14,8 +13,6 @@ export default function Body() {
         </div>
 
         <div className="row">
-          <Details />
-          <Weather />
           <div className="nextDays"></div>
         </div>
       </div>
