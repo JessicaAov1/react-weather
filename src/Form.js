@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Form.css";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
 
 export default function Form() {
   let [city, setCity] = useState("");
@@ -74,10 +73,7 @@ export default function Form() {
             </span>
             <span className="temperature-celsius">°C</span>
             <p className="current-city"> {weather.city} </p>
-            <p className="current-day">
-              {" "}
-              <FormattedDate data={weather.date} />
-            </p>
+            <p className="current-day"> Tuesday, October 26th </p>
             <p className="current-time"></p>
           </div>
         </div>
