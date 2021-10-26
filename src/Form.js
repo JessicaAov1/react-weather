@@ -18,6 +18,7 @@ export default function Form() {
       wind: response.data.wind.speed,
       sunset: response.data.sys.sunset,
       date: new Date(response.data.dt * 1000),
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
     console.log(response.data);
   }
@@ -80,15 +81,10 @@ export default function Form() {
 
         <div className="col-3">
           <div className="weather-details">
-            <div className="clearfix weather-icon">
-              <img
-                src=" https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                alt="Clear"
-                className="float-left icon"
-              />
-            </div>
-
             <ul className="details">
+              <li>
+                <img src={weather.icon} alt={weather.description} />
+              </li>
               <li className="description">{weather.description}</li>
               <li className="humidity">
                 Humidity: {Math.round(weather.humidity)}%
