@@ -1,23 +1,26 @@
 import React, { useState } from "react";
 import "./Form.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function Form() {
   let [city, setCity] = useState("");
   let [weather, setWeather] = useState("");
   let [loaded, setLoaded] = useState(false);
 
-  function displayWeather(reponse) {
+  function displayWeather(response) {
     setLoaded(true);
+
     setWeather({
-      city: reponse.data.main.name,
-      temperature: reponse.data.main.temp,
-      description: reponse.data.weather[0].description,
-      humidity: reponse.data.main.humidity,
-      wind: reponse.data.wind.speed,
-      sunset: reponse.data.sys.sunset,
+      city: response.data.name,
+      temperature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      sunset: response.data.sys.sunset,
+      date: new Date(response.data.dt * 1000),
     });
-    console.log(reponse.data);
+    console.log(response.data);
   }
 
   function updateCity(event) {
@@ -41,7 +44,7 @@ export default function Form() {
           <form className="city-form" onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Enter your city :"
+              placeholder="Enter your city ..."
               onChange={updateCity}
               autoFocus="on"
               autoComplete="off"
@@ -71,8 +74,11 @@ export default function Form() {
             </span>
             <span className="temperature-celsius">°C</span>
             <p className="current-city"> {weather.city} </p>
-            <p className="current-day"> monday</p>
-            <p className="current-time"> 13h00</p>
+            <p className="current-day">
+              {" "}
+              <FormattedDate data={weather.date} />
+            </p>
+            <p className="current-time"></p>
           </div>
         </div>
 
@@ -99,6 +105,40 @@ export default function Form() {
       </div>
     );
   } else {
-    return <h2>{form}</h2>;
+    return (
+      <div>
+        <div className="col-12">
+          <h2> {form}</h2>
+        </div>
+        <div className="col-6">
+          <div className="result">
+            <span className="current-temperature">19</span>
+            <span className="temperature-celsius">°C</span>
+            <p className="current-city">London </p>
+            <p className="current-day">{weather.date}</p>
+            <p className="current-time">15:00</p>
+          </div>
+        </div>
+
+        <div className="col-3">
+          <div className="weather-details">
+            <div className="clearfix weather-icon">
+              <img
+                src=" https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                alt="Clear"
+                className="float-left icon"
+              />
+            </div>
+
+            <ul className="details">
+              <li className="description">Sunny</li>
+              <li className="humidity">Humidity : 80%</li>
+              <li className="wind">Wind: 4km/h</li>
+              <li className="sunset">Sunset:20:00</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
