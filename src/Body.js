@@ -17,7 +17,9 @@ export default function Body() {
         </div>
       </div>
       <div className="row"> </div>
-      <Forecast />
+      <div>
+        <Forecast />
+      </div>
       <Footer />
     </div>
   );
