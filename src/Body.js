@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 import Form from "./Form";
-
+import Forecast from "./Forecast";
 import "./Body.css";
 
 export default function Body() {
@@ -16,7 +16,8 @@ export default function Body() {
           <div className="nextDays"></div>
         </div>
       </div>
-
+      <div className="row"> </div>
+      <Forecast />
       <Footer />
     </div>
   );

@@ -88,3 +88,13 @@ li:first-letter {
   position: relative;
   top: -12px;
 }
+.link-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(99, 71, 71);
+  display: inline;
+  margin: 0;
+  padding: 0;
+}

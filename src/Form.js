@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "./Form.css";
 import axios from "axios";
 
-export default function Form() {
+export default function Form(props) {
   let [city, setCity] = useState("");
   let [weather, setWeather] = useState("");
   let [loaded, setLoaded] = useState(false);
 
+  // retrieve and render weather data from the API
   function displayWeather(response) {
     setLoaded(true);
 
@@ -22,7 +23,7 @@ export default function Form() {
     });
     console.log(response.data);
   }
-
+  //access the city that was typed in the form
   function updateCity(event) {
     setCity(event.target.value);
     console.log(city);
@@ -72,9 +73,14 @@ export default function Form() {
               {" "}
               {Math.round(weather.temperature)}
             </span>
-            <span className="temperature-celsius">°C</span>
+            <span className="temperature-celsius">
+              °C /{" "}
+              <button type="button" className="link-button">
+                F
+              </button>
+            </span>
             <p className="current-city"> {weather.city} </p>
-            <p className="current-day"> Tuesday, October 26th </p>
+            <p className="current-day"> Thursday, October 28 </p>
             <p className="current-time"></p>
           </div>
         </div>
@@ -105,9 +111,14 @@ export default function Form() {
         <div className="col-6">
           <div className="result">
             <span className="current-temperature">19</span>
-            <span className="temperature-celsius">°C</span>
+            <span className="temperature-celsius">
+              °C /{" "}
+              <button type="button" className="link-button">
+                F
+              </button>
+            </span>
             <p className="current-city">London </p>
-            <p className="current-day">{weather.date}</p>
+            <p className="current-day">Tuesday, October 26 </p>
             <p className="current-time">15:00</p>
           </div>
         </div>

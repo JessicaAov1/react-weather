@@ -34,6 +34,7 @@ export default function Head() {
         href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Style+Script&display=swap"
         rel="stylesheet"
       />
+
       <title>Weather App</title>
     </head>
   );
