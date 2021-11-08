@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Titillium Web", sans-serif;
 }
 
 code {

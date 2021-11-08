@@ -5,13 +5,13 @@
 }
 
 .weather-app {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/020/688/original/IMG_20211108_002545.jpg?1636332528");
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/131/original/sky3.png?1630100586 ");
   background-size: cover;
   background-position: center;
-  max-width: 700px;
+  max-width: 800px;
   max-height: 585px;
   display: block;
-  margin: 20px 0px 0px 200px;
+  margin: 20px 0px 0px 160px;
   padding: 30px 30px 150px;
   border: 1px solid;
   border-radius: 20px;

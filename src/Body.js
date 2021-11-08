@@ -3,7 +3,6 @@ import Footer from "./Footer";
 import Form from "./Form";
 import Forecast from "./Forecast";
 import "./Body.css";
-import "bootstrap/dist/css/bootstrap.css";
 
 export default function Body() {
   return (
