@@ -1,39 +1,45 @@
 .nextDays {
   position: relative;
   bottom: 500px;
-  left: 800px;
-  font-size: 22px;
-  color: rgb(49, 48, 48);
+  left: 760px;
+  color: rgb(99, 71, 71);
   font-weight: bold;
   line-height: 0.4;
 }
-h5 {
-  font-size: 22px;
+.card-title {
+  font-size: 16px;
   font-weight: bold;
 }
 
 .first-day {
-  width: 6em;
+  width: 7em;
   background-color: rgb(198, 247, 237);
   margin-bottom: 20px;
 }
 .second-day {
-  width: 6em;
+  width: 7em;
   background-color: rgb(198, 247, 237);
   margin-bottom: 20px;
 }
 .third-day {
-  width: 6em;
+  width: 7em;
   background-color: rgb(198, 247, 237);
   margin-bottom: 20px;
 }
 .fourth-day {
-  width: 6em;
+  width: 7em;
   background-color: rgb(198, 247, 237);
   margin-bottom: 20px;
 }
 .fifth-day {
-  width: 6em;
+  width: 7em;
   background-color: rgb(198, 247, 237);
   margin-bottom: 20px;
+}
+#icon2,
+#icon3,
+#icon4,
+#icon5,
+#icon6 {
+  padding: 0px;
 }

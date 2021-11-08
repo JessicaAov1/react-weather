@@ -5,28 +5,28 @@
   border: 2px solid rgb(117, 80, 80);
   border-radius: 35px;
   background-color: rgb(238, 232, 217);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .greeting {
   color: rgb(117, 80, 80);
-  font-size: 46px;
+  font-size: 38px;
   font-family: "Style Script", cursive;
   font-weight: bold;
   text-align: center;
 }
 
 .city-form {
-  padding: 0px 30px;
+  padding: 0px;
   margin: 0px 10px;
 }
 
 .current-location {
   color: rgb(238, 232, 217);
   background-color: rgb(117, 80, 80);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
-  margin: 0px 30px 0px -40px;
+  margin: 0px 30px 0px -30px;
   padding: 0px 10px;
   border: 1px solid;
   border-radius: 5px;
@@ -44,11 +44,11 @@ li:first-letter {
 }
 .weather-details {
   width: 12rem;
-  margin-top: -200px;
+  margin-top: -140px;
   padding: 0px;
   border: 2px solid rgb(117, 80, 80);
   background-color: rgb(238, 232, 217);
-  color: rgb(49, 48, 48);
+  color: rgb(99, 71, 71);
   border-radius: 12px;
 }
 .details {
@@ -66,27 +66,27 @@ li:first-letter {
 }
 .description {
   font-weight: bolder;
-  font-size: 18px;
+  font-size: 16px;
 }
 .result {
   text-align: center;
-  font-size: 28px;
+  font-size: 24px;
   font-family: Merienda;
-  color: rgb(24, 23, 23);
+  color: rgb(77, 55, 55);
   position: relative;
   left: 180px;
-  top: 30px;
+  top: 50px;
   line-height: 2;
 }
 
 .current-temperature {
-  font-size: 32px;
+  font-size: 30px;
 }
 
-.temp-celsius {
+.temperature-celsius {
   font-size: 14px;
   position: relative;
-  top: -12px;
+  top: -10px;
 }
 .link-button {
   background-color: transparent;
