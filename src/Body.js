@@ -10,7 +10,7 @@ export default function Body() {
     <div className="container">
       <div className="weather-app">
         <div className="row">
-          <Form />
+          <Form defaultCity="Lisbon" />
         </div>
 
         <div className="row">

@@ -3,15 +3,13 @@ import "./Form.css";
 import axios from "axios";
 
 export default function Form(props) {
-  let [city, setCity] = useState("");
-  let [weather, setWeather] = useState("");
-  let [loaded, setLoaded] = useState(false);
+  const [city, setCity] = useState(props.defaultCity);
+  const [weather, setWeather] = useState({ loaded: false });
 
   // retrieve and render weather data from the API
   function displayWeather(response) {
-    setLoaded(true);
-
     setWeather({
+      loaded: true,
       city: response.data.name,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
@@ -25,15 +23,18 @@ export default function Form(props) {
   }
   //access the city that was typed in the form
   function updateCity(event) {
+    event.preventDefault();
     setCity(event.target.value);
     console.log(city);
   }
-
+  function search() {
+    const apiKey = `9ca6c562062d122440b16668ce916487`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(url).then(displayWeather);
+  }
   function handleSubmit(event) {
     event.preventDefault();
-    let apiKey = `9ca6c562062d122440b16668ce916487`;
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(url).then(displayWeather);
+    search();
   }
 
   let form = (
@@ -61,7 +62,7 @@ export default function Form(props) {
     </div>
   );
 
-  if (loaded) {
+  if (weather.loaded) {
     return (
       <div>
         <div className="col-12">
@@ -80,8 +81,8 @@ export default function Form(props) {
               </button>
             </span>
             <p className="current-city"> {weather.city} </p>
-            <p className="current-day"> Thursday, October 28 </p>
-            <p className="current-time"></p>
+            <p className="current-day"> </p>
+            <p className="current-time">15:00</p>
           </div>
         </div>
 
@@ -91,7 +92,7 @@ export default function Form(props) {
               <li>
                 <img src={weather.icon} alt={weather.description} />
               </li>
-              <li className="description">{weather.description}</li>
+              <li className="text-capitalize">{weather.description}</li>
               <li className="humidity">
                 Humidity: {Math.round(weather.humidity)}%
               </li>
@@ -103,45 +104,7 @@ export default function Form(props) {
       </div>
     );
   } else {
-    return (
-      <div>
-        <div className="col-12">
-          <h2> {form}</h2>
-        </div>
-        <div className="col-6">
-          <div className="result">
-            <span className="current-temperature">19</span>
-            <span className="temperature-celsius">
-              °C /{" "}
-              <button type="button" className="link-button">
-                F
-              </button>
-            </span>
-            <p className="current-city">London </p>
-            <p className="current-day">Tuesday, October 26 </p>
-            <p className="current-time">15:00</p>
-          </div>
-        </div>
-
-        <div className="col-3">
-          <div className="weather-details">
-            <div className="clearfix weather-icon">
-              <img
-                src=" https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                alt="Clear"
-                className="float-left icon"
-              />
-            </div>
-
-            <ul className="details">
-              <li className="description">Sunny</li>
-              <li className="humidity">Humidity : 80%</li>
-              <li className="wind">Wind: 4km/h</li>
-              <li className="sunset">Sunset:20:00</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    );
+    search();
+    return "Loading...";
   }
 }
