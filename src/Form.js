@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Form.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
+import Sunset from "./Sunset";
 
 export default function Form(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -15,7 +17,7 @@ export default function Form(props) {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      sunset: response.data.sys.sunset,
+      sunset: new Date(response.data.sys.sunset * 1000),
       date: new Date(response.data.dt * 1000),
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
@@ -81,8 +83,9 @@ export default function Form(props) {
               </button>
             </span>
             <p className="current-city"> {weather.city} </p>
-            <p className="current-day"> </p>
-            <p className="current-time">15:00</p>
+            <p className="current-day">
+              <FormattedDate date={weather.date} />{" "}
+            </p>
           </div>
         </div>
 
@@ -97,7 +100,9 @@ export default function Form(props) {
                 Humidity: {Math.round(weather.humidity)}%
               </li>
               <li className="wind">Wind: {Math.round(weather.wind)}km/h</li>
-              <li className="sunset">Sunset:{weather.sunset}</li>
+              <li className="sunset">
+                <Sunset time={weather.sunset} />
+              </li>
             </ul>
           </div>
         </div>
