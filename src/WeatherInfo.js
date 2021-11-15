@@ -11,10 +11,10 @@ export default function WeatherInfo(props) {
         <div className="result">
           <WeatherTemperature celsius={props.data.temperature} />
 
-          <p className="current-city"> {props.data.city} </p>
-          <p className="current-day">
+          <div className="current-city"> {props.data.city} </div>
+          <div className="current-day">
             <FormattedDate date={props.data.date} />{" "}
-          </p>
+          </div>
         </div>
       </div>
 
