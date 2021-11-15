@@ -2,22 +2,15 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import Sunset from "./Sunset";
 import WeatherIcons from "./WeatherIcons";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
     <div className="weatherInfo">
       <div className="col-6">
         <div className="result">
-          <span className="current-temperature">
-            {" "}
-            {Math.round(props.data.temperature)}
-          </span>
-          <span className="temperature-celsius">
-            °C /{" "}
-            <button type="button" className="link-button">
-              F
-            </button>
-          </span>
+          <WeatherTemperature celsius={props.data.temperature} />
+
           <p className="current-city"> {props.data.city} </p>
           <p className="current-day">
             <FormattedDate date={props.data.date} />{" "}
