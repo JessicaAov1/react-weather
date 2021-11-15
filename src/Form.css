@@ -58,10 +58,9 @@ li:first-letter {
   padding-inline-start: 15px;
 }
 
-.icon {
+.weather-icon {
   display: block;
-  margin: 5px 40px 0px;
-  padding-inline-start: 15px;
+  padding-inline-start: 55px;
   padding-top: 10px;
 }
 .description {
@@ -72,7 +71,7 @@ li:first-letter {
   text-align: center;
   font-size: 24px;
   font-family: Merienda;
-  color: white;
+  color: #332626;
   position: relative;
   left: 180px;
   top: 50px;

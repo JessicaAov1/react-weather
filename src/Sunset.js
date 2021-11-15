@@ -12,7 +12,7 @@ export default function Sunset(props) {
   return (
     <div>
       {" "}
-      Sunset time: {hours}h{minutes}
+      Sunset : {hours}h{minutes}
     </div>
   );
 }

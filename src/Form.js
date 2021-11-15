@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
-import Sunset from "./Sunset";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Form(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -19,13 +18,12 @@ export default function Form(props) {
       wind: response.data.wind.speed,
       sunset: new Date(response.data.sys.sunset * 1000),
       date: new Date(response.data.dt * 1000),
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
     console.log(response.data);
   }
   //access the city that was typed in the form
   function updateCity(event) {
-    event.preventDefault();
     setCity(event.target.value);
     console.log(city);
   }
@@ -70,42 +68,7 @@ export default function Form(props) {
         <div className="col-12">
           <h2> {form}</h2>
         </div>
-        <div className="col-6">
-          <div className="result">
-            <span className="current-temperature">
-              {" "}
-              {Math.round(weather.temperature)}
-            </span>
-            <span className="temperature-celsius">
-              °C /{" "}
-              <button type="button" className="link-button">
-                F
-              </button>
-            </span>
-            <p className="current-city"> {weather.city} </p>
-            <p className="current-day">
-              <FormattedDate date={weather.date} />{" "}
-            </p>
-          </div>
-        </div>
-
-        <div className="col-3">
-          <div className="weather-details">
-            <ul className="details">
-              <li>
-                <img src={weather.icon} alt={weather.description} />
-              </li>
-              <li className="text-capitalize">{weather.description}</li>
-              <li className="humidity">
-                Humidity: {Math.round(weather.humidity)}%
-              </li>
-              <li className="wind">Wind: {Math.round(weather.wind)}km/h</li>
-              <li className="sunset">
-                <Sunset time={weather.sunset} />
-              </li>
-            </ul>
-          </div>
-        </div>
+        <WeatherInfo data={weather} />
       </div>
     );
   } else {
