@@ -1,5 +1,6 @@
 import React from "react";
 import "./Forecast.css";
+import WeatherIcons from "./WeatherIcons";
 
 export default function Forecast() {
   return (
@@ -7,36 +8,12 @@ export default function Forecast() {
       <div className="nextDays">
         <div className="card first-day">
           <div className="card-body">
-            <h5 className="card-title day1">Friday</h5>
-            <p className="card-text temp1">🌤 18°C</p>
-          </div>
-        </div>
-
-        <div className="card second-day">
-          <div className="card-body">
-            <h5 className="card-title day2">Saturday</h5>
-            <p className="card-text temp2">🌤 18°C</p>
-          </div>
-        </div>
-
-        <div className="card third-day">
-          <div className="card-body">
-            <h5 className="card-title day2">Saturday</h5>
-            <p className="card-text temp2">🌤 18°C</p>
-          </div>
-        </div>
-
-        <div className="card fourth-day">
-          <div className="card-body">
-            <h5 className="card-title day2">Saturday</h5>
-            <p className="card-text temp2">🌤 18°C</p>
-          </div>
-        </div>
-
-        <div className="card fifth-day">
-          <div className="card-body">
-            <h5 className="card-title day2">Saturday</h5>
-            <p className="card-text temp2">🌤 18°C</p>
+            <span className="card-title icon">
+              <WeatherIcons code="01n" size={30} />
+            </span>
+            <span className="card-text day1"> Fri </span>
+            <span className="temperature-min">10° | </span>{" "}
+            <span className="temperature-max">18°</span>
           </div>
         </div>
       </div>
