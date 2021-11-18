@@ -1,7 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
 import Form from "./Form";
-import Forecast from "./Forecast";
 import "./Body.css";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -18,9 +17,7 @@ export default function Body() {
         </div>
       </div>
       <div className="row"> </div>
-      <div>
-        <Forecast />
-      </div>
+      <div></div>
       <Footer />
     </div>
   );

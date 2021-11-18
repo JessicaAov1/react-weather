@@ -1,16 +1,16 @@
 .nextDays {
   position: relative;
-  bottom: 500px;
-  left: 760px;
+  bottom: 400px;
+  left: 540px;
   color: rgb(99, 71, 71);
   font-weight: lighter;
   line-height: 1.5;
 }
 .card-title {
-  font-size: 14px;
+  font-size: 25px;
   font-weight: bold;
   position: relative;
-  top: 8px;
+  top: 6px;
 }
 
 .first-day {

@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import Sunset from "./Sunset";
 import WeatherIcons from "./WeatherIcons";
 import WeatherTemperature from "./WeatherTemperature";
+import Forecast from "./Forecast";
 
 export default function WeatherInfo(props) {
   return (
@@ -34,6 +35,10 @@ export default function WeatherInfo(props) {
             </li>
           </ul>
         </div>
+      </div>
+
+      <div className="col-3">
+        <Forecast coordinates={props.data.coordinates} />
       </div>
     </div>
   );

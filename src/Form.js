@@ -19,6 +19,7 @@ export default function Form(props) {
       sunset: new Date(response.data.sys.sunset * 1000),
       date: new Date(response.data.dt * 1000),
       icon: response.data.weather[0].icon,
+      coordinates: response.data.coord,
     });
     console.log(response.data);
   }
