@@ -19,12 +19,12 @@ export default function WeatherForecastDay(props) {
 
   return (
     <div className="nextDays">
-      <div className="card first-day">
+      <div className="card next-days">
         <div className="card-body">
           <span className="card-title icon">
             <WeatherIcons code={props.data.weather[0].icon} size={25} />
           </span>
-          <span className="card-text day1"> {day()}</span>
+          <span className="card-text day"> {day()}</span>
           <br />
           <span className="temperature-min">{temperatureMin()}° | </span>{" "}
           <span className="temperature-max">{temperatureMax()}°</span>

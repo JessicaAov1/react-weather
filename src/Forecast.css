@@ -1,24 +1,17 @@
 .nextDays {
+  width: 6em;
   position: relative;
   bottom: 400px;
   left: 540px;
   color: rgb(99, 71, 71);
   font-weight: lighter;
   line-height: 1.5;
-}
-.card-title {
-  font-size: 25px;
+  font-size: 18px;
+  padding-top: 0px;
+  margin-bottom: 5px;
   font-weight: bold;
-  position: relative;
-  top: 6px;
 }
 
-.first-day {
-  width: 6em;
-  padding-top: 0px;
-  background-color: rgb(198, 247, 237);
-  margin-bottom: 20px;
-}
 .temperature-min {
   font-size: 14px;
   opacity: 0.8;
