@@ -57,11 +57,26 @@ export default function Form(props) {
           </form>
         </div>
         <div className="col-2">
-          <button className="current-location">My location</button>
+          <button className="current-location" onClick={currentData}>
+            My location
+          </button>
         </div>
       </div>
     </div>
   );
+  function showPosition(position) {
+    console.log(position);
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let apiKey = "9ca6c562062d122440b16668ce916487";
+    let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?";
+    let apiUrl = `${apiEndPoint}lat=${latitude}&lon=${longitude}&appid=${apiKey}&&units=metric`;
+
+    axios.get(apiUrl).then(displayWeather);
+  }
+  function currentData(position) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
 
   if (weather.loaded) {
     return (
