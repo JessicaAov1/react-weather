@@ -7,7 +7,9 @@
   bottom: -50px;
   line-height: 2;
 }
-
+a {
+  color: #fff;
+}
 .current-temperature {
   font-size: 32px;
 }
