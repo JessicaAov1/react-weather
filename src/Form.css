@@ -79,22 +79,24 @@ li:first-letter {
 }
 
 .current-temperature {
-  font-size: 30px;
+  font-size: 36px;
+  color: white;
 }
 
 .temperature-celsius {
-  font-size: 16px;
+  font-size: 18px;
+  color: white;
   text-decoration: none;
   position: relative;
-  top: -9px;
+  top: -13px;
 }
 
 .temperature-fahrenheit {
   cursor: pointer;
-  text-decoration: none;
-  font-size: 16px;
+
+  font-size: 18px;
+  color: rgb(99, 71, 71);
   position: relative;
-  top: -9px;
 }
 
 .temperature-fahrenheit hover {
