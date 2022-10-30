@@ -2,14 +2,14 @@
   display: block;
   margin: 0px 150px;
   padding: 10px 15px;
-  border: 2px solid rgb(117, 80, 80);
+  border: 2px solid #453953;
   border-radius: 35px;
   background-color: rgb(238, 232, 217);
   font-size: 13px;
 }
 
 .greeting {
-  color: rgb(117, 80, 80);
+  color: #453953;
   font-size: 38px;
   font-family: "Style Script", cursive;
   font-weight: bold;
@@ -23,7 +23,7 @@
 
 .current-location {
   color: rgb(238, 232, 217);
-  background-color: rgb(117, 80, 80);
+  background-color: #453953;
   font-size: 12px;
   font-weight: bold;
   margin: 0px 30px 0px -30px;
@@ -34,7 +34,7 @@
   top: -5px;
 }
 .current-location:hover {
-  color: #fa8354;
+  color: #335858;
 }
 ul {
   list-style: none;
@@ -46,9 +46,9 @@ li:first-letter {
   width: 11rem;
   margin-top: -140px;
   padding: 0px;
-  border: 2px solid rgb(117, 80, 80);
+  border: 2px solid #25161b;
   background-color: rgb(238, 232, 217);
-  color: rgb(99, 71, 71);
+  color: #453953;
   border-radius: 12px;
 }
 .details {
@@ -71,7 +71,8 @@ li:first-letter {
   text-align: center;
   font-size: 26px;
   font-family: Merienda;
-  color: white;
+  font-weight: bolder;
+  color: #25161b;
   position: relative;
   left: 180px;
   top: 50px;
@@ -80,12 +81,13 @@ li:first-letter {
 
 .current-temperature {
   font-size: 36px;
-  color: white;
+  color: #25161b;
 }
 
 .temperature-celsius {
   font-size: 18px;
-  color: white;
+
+  color: #25161b;
   text-decoration: none;
   position: relative;
   top: -11px;
@@ -93,12 +95,12 @@ li:first-letter {
 
 .temperature-fahrenheit {
   cursor: pointer;
-
   font-size: 18px;
-  color: rgb(99, 71, 71);
+
+  color: #25161b;
   position: relative;
 }
 
 .temperature-fahrenheit hover {
-  color: rgb(79, 79, 116);
+  color: #347474;
 }

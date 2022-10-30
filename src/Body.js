@@ -17,7 +17,7 @@ export default function Body() {
         </div>
       </div>
       <div className="row"> </div>
-      <div></div>
+
       <Footer />
     </div>
   );
