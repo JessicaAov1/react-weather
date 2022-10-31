@@ -8,7 +8,7 @@ export default function Footer() {
         href="https://github.com/JessicaAov1/react-weather"
         className="link-Git"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         <em> Open-source code</em> by Jessica Aronov and hosted by Netlify
       </a>
